@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# 백업할 디렉토리 (현재 디렉토리 기준)
+TARGET_DIR=$(pwd)
+
+# 날짜 형식으로 백업 파일 이름 생성
+DATE=$(date +"%Y%m%d_%H%M%S")
+BACKUP_NAME="backup_$DATE.tar.gz"
+
+# 압축하기
+tar -czf "$BACKUP_NAME" "$TARGET_DIR"
+
+# 결과 출력
+echo "✅ 백업 완료: $BACKUP_NAME"
