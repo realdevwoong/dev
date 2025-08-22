@@ -11,8 +11,7 @@ def multiline_input():
 def main():
     print("multiline_input.py 직접 실행 테스트")
     content = multiline_input()
-    print("입력된 내용:")
-    print(content)
+    print("저장된 내용:" + content)
 
 if __name__ == "__main__":
     main()
