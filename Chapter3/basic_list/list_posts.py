@@ -21,10 +21,11 @@ if __name__ == "__main__":
 #lambda
 #이름이 없는 간단한 함수
 #lambda 매개변수:표현식 
-#def f(x):
+# def f(x):
 #    return x + 10
 
 #print(f(5))  # 15
+
 #f = lambda x: x+10
 #print(f(5)) # 15
 

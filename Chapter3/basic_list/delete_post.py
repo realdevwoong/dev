@@ -13,5 +13,6 @@ def delete_post():
         print("삭제 대상이 없습니다.\n")
         return
     print("삭제 완료.\n")
+    
 #리스트 컴프리헨션
 #[p for p in state.posts if p["id"] != pid]

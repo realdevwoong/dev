@@ -36,28 +36,22 @@ if __name__ == "__main__":
 
 #pid = "１２３"  # 전각 숫자(유니코드)
 #print(pid.isdigit())   # True  (전각 숫자도 True)
+
+#next()는 이터레이터/제너레이터에서 다음 값을 꺼내오는 함수
 #next((x for x in state.posts if x["id"] == pid), None)
 #(x for x in state.posts if x["id"] == pid)
+
 #제네레이터 표현식 
 #실행하면 제네레이터 객체를 반환 
 #리스트와 달리 값을 하나씩 만듬 
-#(())로 만드는 컴프리헨션은 generator 타입 
-#간단하게 생성할 수 있는 문법 
+#(())로 만드는 컴프리헨션은 generator 타입
+#컴프리헨션(Comprehension)은 파이썬에서 리스트, 딕셔너리, 집합, 제너레이터 등의 자료구조를 간결하게 생성할 수 있는 문법 기능 
 
 #List Comprehension
 #nums = [1, 2, 3, 4, 5]
 #squares = [x**2 for x in nums]  # 각 원소 제곱
 #print(squares)  # [1, 4, 9, 16, 25]
-#next()는 이터레이터/제너레이터에서 다음 값을 꺼내오는 함수
-#이터레이터 
-#이터러블: for문에서 하나씩 꺼낼 수 있지만, 직접 next()로 꺼낼 수 없음
-#이터레이터: 반드시 next() (또는 next()) 메서드가 있음
-#nums = [10, 20, 30]          # 리스트는 '이터러블'
-#it = iter(nums)              # 이터레이터 객체로 변환
 
-#print(next(it))  # 10
-#print(next(it))  # 20
-#print(next(it))  # 30
 #제러레이터 
 #제너레이터는 yield 키워드를 사용한 함수에서 생성
 #결과를 하나씩 생성한다
@@ -70,4 +64,19 @@ if __name__ == "__main__":
 #print(next(gen))  # 1
 #print(next(gen))  # 2
 #print(next(gen))  # 3
+
+#이터레이터 
+#이터러블: for문에서 하나씩 꺼낼 수 있지만, 직접 next()로 꺼낼 수 없음
+#이터레이터: 반드시 next() (또는 next()) 메서드가 있음
+#nums = [10, 20, 30]          # 리스트는 '이터러블'
+#it = iter(nums)              # 이터레이터 객체로 변환
+
+#print(next(it))  # 10
+#print(next(it))  # 20
+#print(next(it))  # 30
+
+
 #메모리를 효율적으로 쓸 수 있다.
+
+
+
