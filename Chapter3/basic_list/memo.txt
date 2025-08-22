@@ -1,0 +1,109 @@
+wsl  명령어 
+
+wsl --install 
+wsl --list --verbose
+wsl -l -v 
+wsl --unregister Ubuntu
+wsl -d Ubuntu
+
+
+SSH 원격지(remote)의 셸에 접속하기 위해 사용되는 네트워크 프로토콜
+
+sudo apt update
+sudo apt install openssh-server
+
+sudo systemctl enable ssh
+sudo systemctl start ssh
+포트 
+Well-known port 
+0~1023 -> 시스템 
+Registered port 
+1024~49151-> 특정 프로토콜, 애플리케이션 
+Dynamic port 
+49152~65535->임시 
+
+특정
+Host realwooong
+    HostName 127.0.0.1
+    Port 22
+    User devwoong
+
+
+git init 
+git config --list
+git config --global user.name "" 
+git config --global user.email "" 
+git add .
+git add 파일명 
+git commit -m ""
+git commit 
+git remote -v
+git remote add origin 이름 
+https://github.com/realdevwoong/dev.git
+git convention
+git pull
+git pull origin main --allow-unrelated-histories
+git branch -m master main
+git config pull.rebase false
+git pull origin main
+
+
+pwd
+pwd /
+cd
+cd ..
+cd etc/sysconfig
+cd etc/sysconfig 
+mv abc.txt etc/sysconfig
+mv abc.txt www.txt
+rm -r 
+rm -rf ./folder
+cp file1.txt cp file2.txt
+cp -r my_folder ./backup/
+ls -a
+ls -l 
+ls -al 
+cat myfile.txt
+cat file1.txt file2.txt > combined.txt
+sudo 
+chmod 755 
+chmod +x
+chmod -R 755 my_folder
+chown root file.txt
+chown root:root file.txt
+sudo chown -R devwoong:devwoong my_folder
+mkdir 디렉토리명 
+mkdir -p /woong/dev
+rmdir 디렉토리명 
+
+# Python 3 설치
+apt list python3*
+sudo apt install python3
+
+# pip 설치 (패키지 관리자)
+sudo apt install python3-pip
+
+python3 --version
+pip3 --version
+
+# venv 모듈 설치
+sudo apt install python3-venv
+
+# 가상 환경 생성 예시
+python3 -m venv myenv
+
+# 가상 환경 활성화
+source myenv/bin/activate
+
+state
+util 
+multi
+create
+list
+view
+update
+delete
+menu
+main
+global 
+total
