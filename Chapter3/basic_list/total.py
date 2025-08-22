@@ -21,16 +21,19 @@ class Board:
 
     # C
     def create_post(self):
+        # 제목 입력 (비울 수 없음)
         while True:
             title = input("\n[작성] 제목: ").strip()
             if title:
                 break
             print("제목은 비울 수 없습니다.")
-
-        content = self._multiline_input()
-        if not content:
-            print("내용은 비울 수 없습니다.\n")
-            return
+        
+        # 내용 입력 (비울 수 없음)
+        while True:
+            content = self._multiline_input()
+            if content:
+                break
+            print("내용은 비울 수 없습니다. 다시 입력해주세요.")
 
         self.seq += 1
         self.posts.append({
@@ -71,6 +74,7 @@ class Board:
         print()
 
     # U
+    # U
     def update_post(self):
         pid = input("수정할 ID: ").strip()
         if not pid.isdigit():
@@ -81,16 +85,23 @@ class Board:
         if idx < 0:
             print("해당 글이 없습니다.\n")
             return
-
+        
         cur = self.posts[idx]
         print(f"\n[수정] 현재 제목: {cur['title']}")
         new_title = input("새 제목(Enter면 유지): ").strip() or cur["title"]
-
+        
         print("- 기존 내용 -")
         print(cur["content"])
-        print("- 새 내용 입력 (끝 입력 시 종료, 미입력 시 기존 유지) -")
-        new_content = self._multiline_input() or cur["content"]
-
+        
+        # 먼저 내용 수정 여부 확인
+        edit_content = input("내용을 수정하시겠습니까? (y/n): ").strip().lower()
+        
+        if edit_content == 'y':
+            print("- 새 내용 입력 (끝 입력 시 종료) -")
+            new_content = self._multiline_input()
+        else:
+            new_content = cur["content"]
+        
         cur["title"] = new_title
         cur["content"] = new_content
         print("수정 완료.\n")
